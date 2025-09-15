@@ -26,7 +26,7 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/readapp/css/readapp.css"
-# app_include_js = "/assets/readapp/js/readapp.js"
+app_include_js = "/assets/readapp/js/readapp.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/readapp/css/readapp.css"
@@ -137,24 +137,33 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
+doc_events = {
+    "Work Order":{
+        "on_update_after_submit":"readapp.customizations.work_order.work_order.notify_quality_inspector"
+	}
+#     "College Details":{
+#         "on_update":"readapp.events.demo"
 # 	}
-# }
+# 	"Architect Points Ledger": {
+# 		# "on_submit": "readapp.architect_points_ledger.after_sales_order_submit",
+#         "on_submit": "readapp.readapp.doctype.architect_points_ledger.architect_points_ledger.after_sales_order_submit",
+    
+# # 		"on_cancel": "method",
+# # 		"on_trash": "method"
+# 	}
 
+}
+# 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 # 	"all": [
 # 		"readapp.tasks.all"
 # 	],
-# 	"daily": [
-# 		"readapp.tasks.daily"
-# 	],
+	# "daily": [
+	# 	"readapp.readapp.doctype.architect_points_ledger.architect_points_ledger.expire_old_points"
+	# ],
 # 	"hourly": [
 # 		"readapp.tasks.hourly"
 # 	],
@@ -164,7 +173,7 @@ app_license = "mit"
 # 	"monthly": [
 # 		"readapp.tasks.monthly"
 # 	],
-# }
+}
 
 # Testing
 # -------

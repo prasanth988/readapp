@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-23 13:49:33.652212",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "architect",
+  "points",
+  "date_earned",
+  "status",
+  "sales_order",
+  "items"
+ ],
+ "fields": [
+  {
+   "fieldname": "architect",
+   "fieldtype": "Link",
+   "label": "Architect",
+   "options": "Architect"
+  },
+  {
+   "fieldname": "points",
+   "fieldtype": "Float",
+   "label": "Points"
+  },
+  {
+   "fieldname": "date_earned",
+   "fieldtype": "Date",
+   "label": "Date Earned"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": " Status",
+   "options": "Active\nExpired"
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "options": "Sales Order"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Architect Points Ledger Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-24 11:48:38.905139",
+ "modified_by": "Administrator",
+ "module": "readapp",
+ "name": "Architect Points Ledger",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
